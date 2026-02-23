@@ -7,7 +7,6 @@
    1. CSS CUSTOM PROPERTIES - THEME SYSTEM
    ============================================== */
 
-:root,
 [data-theme="light"] {
     /* Primary Emerald Palette */
     --color-primary-50:   #ecfdf5;
@@ -62,6 +61,7 @@
     --nav-blur:           16px;
 }
 
+:root,
 [data-theme="dark"] {
     --color-primary-50:   #064e3b;
     --color-primary-100:  #065f46;

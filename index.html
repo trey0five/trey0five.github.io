@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
         (function() {
             const t = localStorage.getItem('theme');
             if (t) document.documentElement.setAttribute('data-theme', t);
+            else document.documentElement.setAttribute('data-theme', 'dark');
         })();
     </script>
 
@@ -59,7 +60,7 @@
                     <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--light"></i>
                     <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--dark"></i>
                 </button>
-                <a href="https://docs.google.com/document/d/1dW07BXtuyOCwtCkE4iZavPE-vztRFfKPP01rWwpWPrY/edit?usp=sharing" target="_blank" rel="noopener" class="nav__resume-btn magnetic">Resume</a>
+                <a href="assets/TLM_ATS_Resume_2025.pdf" target="_blank" rel="noopener" class="nav__resume-btn magnetic">Resume</a>
             </div>
             <button class="nav__mobile-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
@@ -75,7 +76,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="https://docs.google.com/document/d/1dW07BXtuyOCwtCkE4iZavPE-vztRFfKPP01rWwpWPrY/edit?usp=sharing" target="_blank" rel="noopener">Resume</a></li>
+            <li><a href="assets/TLM_ATS_Resume_2025.pdf" target="_blank" rel="noopener">Resume</a></li>
         </ul>
     </div>
 
@@ -95,7 +96,7 @@
                         DevOps & Cloud Engineer
                     </h2>
                     <p class="hero__subtitle reveal-up" data-delay="450">
-                        Building scalable infrastructure with AWS, Azure, and modern DevOps practices. Passionate about automation, containerization, and cloud-native architectures.
+                        6+ years building scalable AWS infrastructure, CI/CD pipelines, and containerized workloads. Passionate about automation, monitoring, and cloud-native architectures.
                     </p>
                     <div class="hero__cta reveal-up" data-delay="600">
                         <a href="#projects" class="btn btn--primary magnetic">View My Work</a>
@@ -133,7 +134,7 @@
                     <div class="bento-card bento-card--lg reveal-up" data-tilt>
                         <div class="bento-card__glass">
                             <h3>About Me</h3>
-                            <p>DevOps and Cloud Engineer passionate about building and automating scalable cloud infrastructure. Experienced with AWS and Azure cloud platforms, containerization with Docker and Kubernetes, and implementing robust CI/CD pipelines. I thrive on solving complex infrastructure challenges and enabling teams to deliver software faster and more reliably.</p>
+                            <p>Dynamic DevOps Engineer with 6+ years of experience in AWS infrastructure management and optimization. Proficient in CloudFormation, CI/CD pipelines, and containerization using Docker and ECS, achieving a 20% reduction in AWS spending while maintaining performance. Demonstrated success in building Lambda services and monitoring applications with Grafana and CloudWatch, enhancing system reliability and operational efficiency.</p>
                         </div>
                     </div>
 
@@ -319,9 +320,10 @@
                         <div class="timeline__dot"></div>
                         <div class="timeline__content" data-tilt>
                             <div class="timeline__glass">
-                                <span class="timeline__date">Present</span>
-                                <h3>DevOps / Cloud Engineer</h3>
-                                <p>Building and maintaining cloud infrastructure on AWS and Azure. Automating deployment pipelines, managing containerized applications, and ensuring system reliability and scalability.</p>
+                                <span class="timeline__date">Oct 2023 &mdash; Present</span>
+                                <h3>DevOps Engineer</h3>
+                                <h4 style="color: var(--color-primary-500); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">Titin KM Biomedical, Coral Springs</h4>
+                                <p>Spearheaded AWS infrastructure management including VPCs, networking, IAM, and application stacks through CloudFormation. Achieved ~20% reduction in monthly AWS expenditures through resource right-sizing. Engineered Lambda-based services and maintained CloudWatch/Grafana dashboards.</p>
                             </div>
                         </div>
                     </div>
@@ -330,9 +332,10 @@
                         <div class="timeline__dot"></div>
                         <div class="timeline__content" data-tilt>
                             <div class="timeline__glass">
-                                <span class="timeline__date">Cloud Engineering</span>
-                                <h3>AWS & Azure Projects</h3>
-                                <p>Designed and deployed multi-tier cloud architectures, implemented infrastructure as code with Terraform, and configured CI/CD pipelines for automated deployments.</p>
+                                <span class="timeline__date">Jan 2020 &mdash; Oct 2023</span>
+                                <h3>DevOps / Cloud Engineer</h3>
+                                <h4 style="color: var(--color-primary-500); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">PAUL Tech, Remote</h4>
+                                <p>Instituted CI/CD pipelines with GitLab CI/CD and Bitbucket Pipelines for microservices and containerized workloads. Provisioned infrastructure with Terraform and CloudFormation. Containerized applications with Docker and deployed to Amazon ECS/Fargate.</p>
                             </div>
                         </div>
                     </div>
@@ -341,16 +344,29 @@
                         <div class="timeline__dot"></div>
                         <div class="timeline__content" data-tilt>
                             <div class="timeline__glass">
-                                <span class="timeline__date">Foundations</span>
-                                <h3>Cloud Engineering Training</h3>
-                                <p>Comprehensive training in cloud platforms, Linux administration, networking, containerization with Docker and Kubernetes, and DevOps methodologies.</p>
+                                <span class="timeline__date">Jan 2019 &mdash; Jan 2020</span>
+                                <h3>Backend Developer / DevOps Engineer</h3>
+                                <h4 style="color: var(--color-primary-500); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">24Data, Tampa</h4>
+                                <p>Developed and maintained backend services while contributing to DevOps initiatives. Assisted in CI/CD pipeline design for API and data-processing services. Participated in containerization of legacy workloads to Docker-based workflows.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item reveal-right" data-delay="600">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content" data-tilt>
+                            <div class="timeline__glass">
+                                <span class="timeline__date">Jan 2017 &mdash; Jan 2020</span>
+                                <h3>Cloud & Web Developer</h3>
+                                <h4 style="color: var(--color-primary-500); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">Luminous Hilt, LLC, Tampa</h4>
+                                <p>Delivered cloud-hosted web applications for small business clients on AWS. Configured hosting environments, DNS, and SSL certificates. Instituted CI/CD practices and monitoring systems for client projects.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="experience__resume-cta reveal-up">
-                    <a href="https://docs.google.com/document/d/1dW07BXtuyOCwtCkE4iZavPE-vztRFfKPP01rWwpWPrY/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn--primary magnetic">
+                    <a href="assets/TLM_ATS_Resume_2025.pdf" target="_blank" rel="noopener" class="btn btn--primary magnetic">
                         <i class="fas fa-file-alt"></i> View Full Resume
                     </a>
                 </div>

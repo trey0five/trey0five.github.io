@@ -14,11 +14,11 @@
             const toggle = document.getElementById('theme-toggle');
             const stored = localStorage.getItem('theme');
 
-            // Apply stored theme or default to light
+            // Apply stored theme or default to dark
             if (stored) {
                 document.documentElement.setAttribute('data-theme', stored);
             } else {
-                document.documentElement.setAttribute('data-theme', 'light');
+                document.documentElement.setAttribute('data-theme', 'dark');
             }
 
             if (toggle) {
