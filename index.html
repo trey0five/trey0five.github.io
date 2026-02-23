@@ -1,133 +1,400 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torrey Munroe | DevOps & Cloud Engineer</title>
+    <meta name="description" content="Portfolio of Torrey Munroe - DevOps & Cloud Engineer specializing in AWS, Azure, Docker, Kubernetes, Terraform, and CI/CD pipelines.">
 
-<html>
-	<head>
-		<title>Torrey Munroe's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+    <!-- Prevent theme flash -->
+    <script>
+        (function() {
+            const t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>My Portfolio</h1>
-						<p>A showcase of my Cloud Engineering projects and my abilities</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">WELCOME</a>
-					</header>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">My Projects</a></li>
-							
-						</ul>
-						<ul class="icons">
-							
-							<li><a href="http://www.linkedin.com/in/torrey-munroe-2904a127/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/trey0five" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+    <!-- Animated Background -->
+    <div class="bg-mesh" aria-hidden="true">
+        <div class="bg-mesh__layer bg-mesh__layer--1"></div>
+        <div class="bg-mesh__layer bg-mesh__layer--2"></div>
+        <div class="bg-mesh__layer bg-mesh__layer--3"></div>
+        <canvas id="particle-canvas"></canvas>
+    </div>
 
-				<!-- Main -->
-					<div id="main">
+    <!-- Custom Cursor -->
+    <div class="cursor" aria-hidden="true">
+        <div class="cursor__dot"></div>
+        <div class="cursor__ring"></div>
+    </div>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="#">Torrey Munroe</a></h2>
-									<p>Up and coming Cloud Engineer</p>
-								</header>
-								<a href="https://docs.google.com/document/d/1dW07BXtuyOCwtCkE4iZavPE-vztRFfKPP01rWwpWPrY/edit?usp=sharing" target="_blank"  class="image main"><img src="https://i0.wp.com/biztechcollege.com/wp-content/uploads/2021/01/Cloud-Network-Engineer-vs-Network-Engineer.png?fit=1920%2C1080&ssl=1" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://docs.google.com/document/d/1dW07BXtuyOCwtCkE4iZavPE-vztRFfKPP01rWwpWPrY/edit?usp=sharing" target="_blank" class="button large">My Resume</a></li>
-								</ul>
-							</article>
-							
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#hero" class="nav__logo">
+                <span class="nav__logo-text">TM</span>
+                <span class="nav__logo-dot"></span>
+            </a>
+            <ul class="nav__links">
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#projects" class="nav__link">Projects</a></li>
+                <li><a href="#experience" class="nav__link">Experience</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+            <div class="nav__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--light"></i>
+                    <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--dark"></i>
+                </button>
+                <a href="https://docs.google.com/document/d/1dW07BXtuyOCwtCkE4iZavPE-vztRFfKPP01rWwpWPrY/edit?usp=sharing" target="_blank" rel="noopener" class="nav__resume-btn magnetic">Resume</a>
+            </div>
+            <button class="nav__mobile-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-							
-										<h2><a href="#">AWS Capstone Project</a></h2>
-									</header>
-									<a href="https://teerobucket9999.s3.us-east-2.amazonaws.com/AWSCapstone.pdf"target="_blank" class="image fit"><img src="https://futurumresearch.com/wp-content/uploads/2020/01/aws-logo.png" alt=""/></a>
-									<p></p>
-									<ul class="actions special">
-										<li><a href="https://teerobucket9999.s3.us-east-2.amazonaws.com/AWSCapstone.pdf" target="_blank" class="button">Check It Out</a></li>
-									</ul>
-								</article>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav__overlay" id="mobile-nav-overlay"></div>
+    <div class="mobile-nav" id="mobile-nav">
+        <ul class="mobile-nav__links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://docs.google.com/document/d/1dW07BXtuyOCwtCkE4iZavPE-vztRFfKPP01rWwpWPrY/edit?usp=sharing" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+    </div>
 
-								<article>
-									<header>
-							
-										<h2><a href="#">AWS Project 1</a></h2>
-									</header>
-									<a href="https://teerobucket9999.s3.us-east-2.amazonaws.com/AWS+project.pdf"target="_blank" class="image fit"><img src="https://i2.wp.com/www.theseattledataguy.com/wp-content/uploads/2021/04/aws-logo.png?ssl=1" alt="" /></a>
-									<p></p>
-									<ul class="actions special">
-										<li><a href="https://teerobucket9999.s3.us-east-2.amazonaws.com/AWS+project.pdf" target="_blank" class="button">Check It Out</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="#">Azure Project</a></h2>
-									</header>
-									<a href="https://teerobucket9999.s3.us-east-2.amazonaws.com/azure+project+2.pdf" target="_blank"class="image fit"><img src="https://www.conseil3d.com/wp-content/uploads/2021/06/logo-microsoft-cloud-azure-png.png" alt="" /></a>
-									<p></p>
-									<ul class="actions special">
-										<li><a href="https://teerobucket9999.s3.us-east-2.amazonaws.com/azure+project+2.pdf" target="_blank" class="button">Check It Out</a></li>
-									</ul>
-								</article>
-						
-								
-							</section>
+    <main>
+        <!-- ============================== -->
+        <!-- HERO SECTION                   -->
+        <!-- ============================== -->
+        <section class="hero" id="hero">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <p class="hero__greeting reveal-up">Hello, I'm</p>
+                    <h1 class="hero__name reveal-up" data-delay="150">
+                        <span class="hero__name-first">Torrey</span>
+                        <span class="hero__name-last">Munroe</span>
+                    </h1>
+                    <h2 class="hero__title reveal-up" data-delay="300">
+                        DevOps & Cloud Engineer
+                    </h2>
+                    <p class="hero__subtitle reveal-up" data-delay="450">
+                        Building scalable infrastructure with AWS, Azure, and modern DevOps practices. Passionate about automation, containerization, and cloud-native architectures.
+                    </p>
+                    <div class="hero__cta reveal-up" data-delay="600">
+                        <a href="#projects" class="btn btn--primary magnetic">View My Work</a>
+                        <a href="#contact" class="btn btn--outline magnetic">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero__terminal reveal-up" data-delay="300">
+                    <div class="terminal">
+                        <div class="terminal__header">
+                            <span class="terminal__dot terminal__dot--red"></span>
+                            <span class="terminal__dot terminal__dot--yellow"></span>
+                            <span class="terminal__dot terminal__dot--green"></span>
+                            <span class="terminal__title">torrey@cloud:~</span>
+                        </div>
+                        <div class="terminal__body" id="terminal"></div>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="hero__scroll-indicator" aria-label="Scroll down">
+                <div class="scroll-arrow"></div>
+            </a>
+        </section>
 
+        <!-- ============================== -->
+        <!-- ABOUT & SKILLS SECTION         -->
+        <!-- ============================== -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-heading reveal-up">
+                    <span class="section-heading__number">01.</span>
+                    About & Skills
+                </h2>
+                <div class="bento-grid">
+                    <!-- About Card -->
+                    <div class="bento-card bento-card--lg reveal-up" data-tilt>
+                        <div class="bento-card__glass">
+                            <h3>About Me</h3>
+                            <p>DevOps and Cloud Engineer passionate about building and automating scalable cloud infrastructure. Experienced with AWS and Azure cloud platforms, containerization with Docker and Kubernetes, and implementing robust CI/CD pipelines. I thrive on solving complex infrastructure challenges and enabling teams to deliver software faster and more reliably.</p>
+                        </div>
+                    </div>
 
+                    <!-- AWS -->
+                    <div class="bento-card bento-card--sm reveal-up" data-delay="100" data-tilt>
+                        <div class="bento-card__glass">
+                            <i class="fab fa-aws bento-card__icon"></i>
+                            <h4>AWS</h4>
+                            <div class="skill-bar" data-level="90"></div>
+                        </div>
+                    </div>
 
-			
-						<section class="split contact">
-						
-							<section>
-								<h3>Email</h3>
-								<p><a href="mailto: Torrey.Munroe@gmail.com">Torrey.Munroe@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-	
-									<li><a href="http://www.linkedin.com/in/torrey-munroe-2904a127/" target="_blank"  class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/trey0five" target="_blank"  class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+                    <!-- Azure -->
+                    <div class="bento-card bento-card--sm reveal-up" data-delay="200" data-tilt>
+                        <div class="bento-card__glass">
+                            <i class="fab fa-microsoft bento-card__icon"></i>
+                            <h4>Azure</h4>
+                            <div class="skill-bar" data-level="85"></div>
+                        </div>
+                    </div>
 
-				
+                    <!-- Docker -->
+                    <div class="bento-card bento-card--sm reveal-up" data-delay="300" data-tilt>
+                        <div class="bento-card__glass">
+                            <i class="fab fa-docker bento-card__icon"></i>
+                            <h4>Docker</h4>
+                            <div class="skill-bar" data-level="85"></div>
+                        </div>
+                    </div>
 
-			</div>
+                    <!-- Kubernetes -->
+                    <div class="bento-card bento-card--sm reveal-up" data-delay="400" data-tilt>
+                        <div class="bento-card__glass">
+                            <i class="fas fa-dharmachakra bento-card__icon"></i>
+                            <h4>Kubernetes</h4>
+                            <div class="skill-bar" data-level="80"></div>
+                        </div>
+                    </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+                    <!-- CI/CD -->
+                    <div class="bento-card bento-card--md reveal-up" data-delay="500" data-tilt>
+                        <div class="bento-card__glass">
+                            <i class="fas fa-code-branch bento-card__icon"></i>
+                            <h4>CI/CD Pipelines</h4>
+                            <div class="skill-bar" data-level="88"></div>
+                        </div>
+                    </div>
 
-	</body>
+                    <!-- Terraform -->
+                    <div class="bento-card bento-card--sm reveal-up" data-delay="600" data-tilt>
+                        <div class="bento-card__glass">
+                            <i class="fas fa-cubes bento-card__icon"></i>
+                            <h4>Terraform</h4>
+                            <div class="skill-bar" data-level="82"></div>
+                        </div>
+                    </div>
+
+                    <!-- Linux -->
+                    <div class="bento-card bento-card--sm reveal-up" data-delay="700" data-tilt>
+                        <div class="bento-card__glass">
+                            <i class="fab fa-linux bento-card__icon"></i>
+                            <h4>Linux</h4>
+                            <div class="skill-bar" data-level="90"></div>
+                        </div>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="bento-card bento-card--sm reveal-up" data-delay="800" data-tilt>
+                        <div class="bento-card__glass">
+                            <i class="fab fa-python bento-card__icon"></i>
+                            <h4>Python</h4>
+                            <div class="skill-bar" data-level="75"></div>
+                        </div>
+                    </div>
+
+                    <!-- Git -->
+                    <div class="bento-card bento-card--sm reveal-up" data-delay="900" data-tilt>
+                        <div class="bento-card__glass">
+                            <i class="fab fa-git-alt bento-card__icon"></i>
+                            <h4>Git</h4>
+                            <div class="skill-bar" data-level="88"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================== -->
+        <!-- PROJECTS SECTION               -->
+        <!-- ============================== -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="section-heading reveal-up">
+                    <span class="section-heading__number">02.</span>
+                    Projects
+                </h2>
+                <div class="projects__grid">
+                    <!-- AWS Capstone -->
+                    <article class="project-card reveal-up" data-tilt>
+                        <div class="project-card__glass">
+                            <div class="project-card__header">
+                                <i class="fas fa-folder-open project-card__folder"></i>
+                                <div class="project-card__links">
+                                    <a href="https://teerobucket9999.s3.us-east-2.amazonaws.com/AWSCapstone.pdf" target="_blank" rel="noopener" aria-label="View AWS Capstone Project PDF" class="magnetic">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-card__title">AWS Capstone Project</h3>
+                            <p class="project-card__description">Comprehensive AWS cloud architecture project demonstrating end-to-end deployment, infrastructure design, and cloud best practices across multiple services.</p>
+                            <div class="project-card__tags">
+                                <span>AWS</span>
+                                <span>EC2</span>
+                                <span>S3</span>
+                                <span>VPC</span>
+                                <span>IAM</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- AWS Project 1 -->
+                    <article class="project-card reveal-up" data-delay="200" data-tilt>
+                        <div class="project-card__glass">
+                            <div class="project-card__header">
+                                <i class="fas fa-folder-open project-card__folder"></i>
+                                <div class="project-card__links">
+                                    <a href="https://teerobucket9999.s3.us-east-2.amazonaws.com/AWS+project.pdf" target="_blank" rel="noopener" aria-label="View AWS Cloud Infrastructure PDF" class="magnetic">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-card__title">AWS Cloud Infrastructure</h3>
+                            <p class="project-card__description">AWS infrastructure deployment project showcasing cloud networking, compute resources, and scalable architecture patterns with production-grade configurations.</p>
+                            <div class="project-card__tags">
+                                <span>AWS</span>
+                                <span>CloudFormation</span>
+                                <span>Lambda</span>
+                                <span>RDS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Azure Project -->
+                    <article class="project-card reveal-up" data-delay="400" data-tilt>
+                        <div class="project-card__glass">
+                            <div class="project-card__header">
+                                <i class="fas fa-folder-open project-card__folder"></i>
+                                <div class="project-card__links">
+                                    <a href="https://teerobucket9999.s3.us-east-2.amazonaws.com/azure+project+2.pdf" target="_blank" rel="noopener" aria-label="View Azure Cloud Project PDF" class="magnetic">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-card__title">Azure Cloud Project</h3>
+                            <p class="project-card__description">Microsoft Azure cloud deployment project utilizing Azure services for building resilient, enterprise-grade infrastructure with networking and identity management.</p>
+                            <div class="project-card__tags">
+                                <span>Azure</span>
+                                <span>VMs</span>
+                                <span>Networking</span>
+                                <span>AD</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================== -->
+        <!-- EXPERIENCE SECTION             -->
+        <!-- ============================== -->
+        <section class="experience" id="experience">
+            <div class="container">
+                <h2 class="section-heading reveal-up">
+                    <span class="section-heading__number">03.</span>
+                    Experience
+                </h2>
+                <div class="timeline">
+                    <div class="timeline__line">
+                        <div class="timeline__progress"></div>
+                    </div>
+
+                    <div class="timeline__item reveal-left">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content" data-tilt>
+                            <div class="timeline__glass">
+                                <span class="timeline__date">Present</span>
+                                <h3>DevOps / Cloud Engineer</h3>
+                                <p>Building and maintaining cloud infrastructure on AWS and Azure. Automating deployment pipelines, managing containerized applications, and ensuring system reliability and scalability.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item reveal-right" data-delay="200">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content" data-tilt>
+                            <div class="timeline__glass">
+                                <span class="timeline__date">Cloud Engineering</span>
+                                <h3>AWS & Azure Projects</h3>
+                                <p>Designed and deployed multi-tier cloud architectures, implemented infrastructure as code with Terraform, and configured CI/CD pipelines for automated deployments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item reveal-left" data-delay="400">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content" data-tilt>
+                            <div class="timeline__glass">
+                                <span class="timeline__date">Foundations</span>
+                                <h3>Cloud Engineering Training</h3>
+                                <p>Comprehensive training in cloud platforms, Linux administration, networking, containerization with Docker and Kubernetes, and DevOps methodologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience__resume-cta reveal-up">
+                    <a href="https://docs.google.com/document/d/1dW07BXtuyOCwtCkE4iZavPE-vztRFfKPP01rWwpWPrY/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn--primary magnetic">
+                        <i class="fas fa-file-alt"></i> View Full Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================== -->
+        <!-- CONTACT SECTION                -->
+        <!-- ============================== -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-heading reveal-up">
+                    <span class="section-heading__number">04.</span>
+                    Get In Touch
+                </h2>
+                <div class="contact__card reveal-up" data-delay="150" data-tilt>
+                    <div class="contact__glass">
+                        <p class="contact__text">I'm actively seeking DevOps and Cloud Engineering opportunities. Whether you have a question, a project idea, or just want to connect &mdash; feel free to reach out.</p>
+                        <a href="mailto:Torrey.Munroe@gmail.com" class="btn btn--primary btn--lg magnetic">
+                            Say Hello
+                        </a>
+                        <div class="contact__socials">
+                            <a href="http://www.linkedin.com/in/torrey-munroe-2904a127/" target="_blank" rel="noopener" class="social-icon magnetic" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/trey0five" target="_blank" rel="noopener" class="social-icon magnetic" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:Torrey.Munroe@gmail.com" class="social-icon magnetic" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Designed & Built by Torrey Munroe</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/app.js"></script>
+</body>
 </html>
