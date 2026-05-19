@@ -1160,6 +1160,14 @@ main {
     line-height: 1.7;
 }
 
+.contact__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
 .contact__socials {
     display: flex;
     justify-content: center;
